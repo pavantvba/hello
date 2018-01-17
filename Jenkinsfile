@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                sh 'java -help'
+                java -help
             }
         }
         stage('Sanity Check') {
