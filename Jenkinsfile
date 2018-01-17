@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
+                mvn -B -DskipTests clean package
             }
         }
         stage('Sanity Check') {
