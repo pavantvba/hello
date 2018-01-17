@@ -30,5 +30,6 @@ pipeline {
     post {
         allways {
             echo 'Deployment done on all stages..'
+        }
     }
 }
