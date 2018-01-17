@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                sh 'mvn -B -DskipTests clean package'
+                sh 'java -help'
             }
         }
         stage('Sanity Check') {
