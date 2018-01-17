@@ -1,10 +1,34 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                echo 'Hello World!'
+                echo 'Building'
             }
         }
+        stage('Sanity Check') {
+            steps {
+                input 'Does Build action sucessfull?'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Sanity Check') {
+            steps {
+                input 'Does Testing environment is ok?'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+    post {
+        allways {
+            echo 'Deployment done on all stages..'
     }
 }
