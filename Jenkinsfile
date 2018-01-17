@@ -16,7 +16,7 @@ pipeline {
                 echo 'Testing'
             }
         }
-        stage('Sanity Check') {
+        stage('Sanity Check Test') {
             steps {
                 input 'Does Testing environment is ok?'
             }
@@ -28,7 +28,7 @@ pipeline {
         }
     }
     post {
-        allways {
+        always {
             echo 'Deployment done on all stages..'
         }
     }
